@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "Enter program file to run (c, c++, java, python)"
+
+read filename
+file=${filename%.*}
+ext=${filename#*.}
+#echo $ext
+
+#read ext
+
+if [ "$ext" = "py" ] || [ "$ext" = "PY" ]
+then
+	#echo "python"
+	python $filename
+
+elif [ "$ext" = "cpp" ] || [ "$ext" = "CPP" ]
+then
+	#echo "c++"
+	g++ $filename && ./a.out
+
+elif [ "$ext" = "c" ] || [ "$ext" = "C" ]
+then
+	#echo "gcc"	
+	gcc $filename && ./a.out
+
+elif [ "$ext" = "java" ]
+then
+	#echo "gcc"	
+	javac $filename && java $file 
+
+
+else
+	echo "Unknown file type"
+fi
