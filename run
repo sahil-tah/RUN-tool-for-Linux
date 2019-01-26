@@ -6,7 +6,7 @@ read filename
 file=${filename%.*}
 ext=${filename#*.}
 #echo $ext
-
+echo " "
 #read ext
 
 if [ "$ext" = "py" ] || [ "$ext" = "PY" ]
@@ -29,6 +29,10 @@ then
 	#echo "gcc"	
 	javac $filename && java $file 
 
+elif [ "$ext" = "flex" ]
+then
+	#echo "flex"	
+	flex $filename && gcc lex.yy.c && ./a.out 
 
 else
 	echo "Unknown file type"
