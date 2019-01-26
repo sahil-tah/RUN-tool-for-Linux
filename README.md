@@ -6,6 +6,7 @@ Currently supports:
 * C/C++
 * Java
 * Python
+* FLEX - Fast Lexical Analyzer Generator
  
 
 ## Getting Started
