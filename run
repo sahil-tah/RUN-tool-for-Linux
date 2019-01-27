@@ -34,6 +34,11 @@ then
 	#echo "flex"	
 	flex $filename && gcc lex.yy.c && ./a.out 
 
+elif [ "$ext" = "sh" ]
+then
+	#echo "bash"	
+	./$filename
+
 else
 	echo "Unknown file type"
 fi
