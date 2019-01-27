@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "Enter program file to run (c, c++, java, python)"
-
-read filename
+#echo "Enter program file to run (c, c++, java, python)"
+#read filename
+filename="$1" 	
 file=${filename%.*}
 ext=${filename#*.}
 #echo $ext
-echo " "
+#echo " "
 #read ext
 
 if [ "$ext" = "py" ] || [ "$ext" = "PY" ]
