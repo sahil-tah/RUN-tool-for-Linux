@@ -40,7 +40,7 @@ Now, copy the script in the path:
 
 You're all done! Run the command by typing:
 ```
-> run
+> run <filename>
 ```
 
 Have Fun. :)
