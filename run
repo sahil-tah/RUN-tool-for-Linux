@@ -4,7 +4,7 @@
 #read filename
 filename="$1" 	
 file=${filename%.*}
-ext=${filename#*.}
+ext=${filename##*.}
 #echo $ext
 #echo " "
 #read ext
