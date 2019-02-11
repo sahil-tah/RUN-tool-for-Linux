@@ -44,6 +44,8 @@ You're all done! Run the command by typing:
 > run <filename>
 ```
 
+You need not have to type the whole filename, type the initial of the filename, tab will handle the rest!
+
 Have Fun. :)
 
 
