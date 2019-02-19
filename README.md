@@ -44,7 +44,9 @@ You're all done! Run the command by typing:
 > run <filename>
 ```
 
-Have Fun. :)
+You need not have to type the whole filename, type the initial letter and then tab will handle the rest ;)
+
+Have Fun!
 
 
 ## License
