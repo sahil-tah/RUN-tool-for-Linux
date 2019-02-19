@@ -4,7 +4,8 @@
 #read filename
 filename="$1" 	
 file=${filename%.*}
-ext=${filename#*.}
+#ext=${filename#*.}
+ext=${filename##*.}
 #echo $ext
 #echo " "
 #read ext
@@ -17,12 +18,12 @@ then
 elif [ "$ext" = "cpp" ] || [ "$ext" = "CPP" ]
 then
 	#echo "c++"
-	g++ $filename && ./a.out
+	g++ $filename -o $file && ./$file
 
 elif [ "$ext" = "c" ] || [ "$ext" = "C" ]
 then
 	#echo "gcc"	
-	gcc $filename && ./a.out
+	gcc $filename -o $file && ./$file
 
 elif [ "$ext" = "java" ]
 then
