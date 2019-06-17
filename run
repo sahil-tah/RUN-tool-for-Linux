@@ -1,43 +1,45 @@
 #!/bin/bash
 
-#echo "Enter program file to run (c, c++, java, python)"
-#read filename
-filename="$1" 	
+filename="$1"
+ver="$2" 	
 file=${filename%.*}
 ext=${filename##*.}
-#echo $ext
-#echo " "
-#read ext
 
-if [ "$ext" = "py" ] || [ "$ext" = "PY" ]
+if [ "$ext" = "py" ] || [ "$ext" = "PY" ]		
 then
-	#echo "python"
-	python $filename
+	if [ "$ver" = "-2" ]
+	then
+		#echo "python2"
+		python $filename					# Python 2 
+	else
+		#echo "python3"
+		python3 $filename					# Python 3
+	fi
 
 elif [ "$ext" = "cpp" ] || [ "$ext" = "CPP" ]
 then
 	#echo "c++"
-	g++ $filename -o $file && ./$file
+	g++ $filename -o $file && ./$file 		# C++
 
 elif [ "$ext" = "c" ] || [ "$ext" = "C" ]
 then
 	#echo "gcc"	
-	gcc $filename -o $file && ./$file
+	gcc $filename -o $file && ./$file 		# C
 
 elif [ "$ext" = "java" ]
 then
 	#echo "gcc"	
-	javac $filename && java $file 
+	javac $filename && java $file 			# Java
 
 elif [ "$ext" = "flex" ]
-then
+then	
 	#echo "flex"	
-	flex $filename && gcc lex.yy.c && ./a.out 
+	flex $filename && gcc lex.yy.c && ./a.out 	#Flex
 
 elif [ "$ext" = "sh" ]
 then
 	#echo "bash"	
-	./$filename
+	./$filename			#Bash
 
 else
 	echo "Unknown file type"
