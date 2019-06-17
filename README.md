@@ -6,7 +6,7 @@ Currently supports:
 * C/C++
 * Java
 * Python (2 and 3 both) 
-* Bash
+* Bash/Shell
 * FLEX - Fast Lexical Analyzer Generator
  
 
@@ -50,7 +50,7 @@ Have Fun!
 
 ### Edit
 
-Now you can work with Python 2 and Python 3. By default it will run Python 3 but in case if you want to run a python 2 file, simply add "-2" after the filename.
+Now you can work with Python 2 and Python 3 altogether. By default it will run Python 3 but for python 2, simply add "-2" after the filename.
 ```
 > run <filename> -2
 ```
