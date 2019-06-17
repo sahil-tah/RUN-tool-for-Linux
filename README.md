@@ -5,7 +5,7 @@ A simple tool for beginners to directly 'compile' and 'run' their programs by di
 Currently supports:
 * C/C++
 * Java
-* Python
+* Python (2 and 3 both) 
 * Bash
 * FLEX - Fast Lexical Analyzer Generator
  
@@ -48,6 +48,12 @@ You need not have to type the whole filename, type the initial letter and then t
 
 Have Fun!
 
+### Edit
+
+Now you can work with Python 2 and Python 3. By default it will run Python 3 but in case if you want to run a python 2 file, simply add "-2" after the filename.
+```
+> run <filename> -2
+```
 
 ## License
 
