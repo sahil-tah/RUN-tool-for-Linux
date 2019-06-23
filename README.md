@@ -36,7 +36,12 @@ Make script file executable:
 
 Now, copy the script in the path:
 ```
-> sudo cp run /usr/bin/
+> sudo cp run /usr/bin/  
+```
+
+For mac users:
+```
+> sudo cp run /usr/local/bin/
 ```
 
 You're all done! Run the command by typing:
