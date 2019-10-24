@@ -39,7 +39,13 @@ then
 elif [ "$ext" = "sh" ]
 then
 	#echo "bash"	
-	./$filename			#Bash
+	if [[ -x $filename ]]; then
+		./$filename			#Bash
+	else
+		chmod +x $filename
+		./$filename
+	fi
+	
 
 else
 	echo "Unknown file type"
