@@ -10,16 +10,16 @@ then
 	if [ "$ver" = "-2" ]
 	then
 		#echo "python2"
-		python $filename "${@:2}"			# Python 2 
+		python $filename			# Python 2 
 	else
 		#echo "python3"
-		python3 $filename "${@:2}"			# Python 3
+		python3 $filename			# Python 3
 	fi
 
 elif [ "$ext" = "cpp" ] || [ "$ext" = "CPP" ]
 then
 	#echo "c++"
-	g++ $filename -o $file && ./$file "${@:2}" 		# C++
+	g++ $filename -o $file && ./$file 		# C++
 
 elif [ "$ext" = "c" ] || [ "$ext" = "C" ]
 then
@@ -39,7 +39,7 @@ then
 elif [ "$ext" = "sh" ]
 then
 	#echo "bash"	
-	./$filename	"${@:2}"		#Bash
+	./$filename			#Bash
 
 else
 	echo "Unknown file type"
